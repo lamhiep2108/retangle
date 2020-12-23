@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<canvas id="mycanvas" width="1000px" height="700px"  style="border: 1px solid black " ;></canvas>
+<script>
+    let Rectangle = function (length,width){
+        this.length=length;
+        this.width=width;
+        this.getlength=function (){
+            return this.length;
+        }
+        this.getwidth =  function (){
+            return this.width;
+        }
+        this.setLength = function (length){
+            this.length = length
+        }
+        this.setwidth = function (width){
+            this.width=width
+        }
+        this.tinhDt= function(){
+            return this.length*this.width;
+        }
+        this.tinhCv=function (){
+            return 2*(this.length+this.width)
+        }
+        }
+    var retangle=new Rectangle(200,100)
+   ;
+    alert(retangle.tinhDt())
+    alert(retangle.tinhCv());
+    function veRetangle(){
+    let ctx = document.getElementById("mycanvas").getContext('2d');
+    ctx.fillStyle = "#d64242";
+    ctx.fillRect(40,40,retangle.length,retangle.width);
+    } veRetangle()
+   var Retangle2 = new Rectangle(300,200)
+    alert(Retangle2.tinhCv())
+    alert(Retangle2.tinhDt())
+    var re
+</script>
+</body>
+</html>
